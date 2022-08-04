@@ -1,0 +1,31 @@
+ <div class="container">
+    <button type="submit" class="btn btn-success" [routerLink]="['/newemployee']">ADD EMPLOYEE</button>
+    <table class="table table-striped" *ngIf="employee">
+
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let em of employee">
+
+                <td>{{em.firstName}}</td>
+                <td>{{em.lastName}}</td>
+                <td>{{em.description}}</td>
+                <td>{{em.status}}</td>
+
+                <td>Action</td>
+
+
+            </tr>
+        </tbody>
+
+    </table>
+</div> 
+
