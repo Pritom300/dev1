@@ -12,9 +12,15 @@ import { HomeComponent } from './home/home.component';
 import { CustomersComponent } from './customers/customers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeComponent } from './employee/employee.component';
-import {EmployeeService} from './services/employee.service';
+import {EmployeeService} from './services/employee.service';
 import { NewEmployeeComponent } from './new-employee/new-employee.component';
-import { RegisterComponent } from './register/register.component'; 
+import { RegisterComponent } from './register/register.component';
+import { ProductsComponent } from './products/products.component'; 
+import { ProductService } from './services/product.service';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ProductupdateComponent } from './productupdate/productupdate.component';
+import { ProductaddComponent } from './productadd/productadd.component';
+import { ProductdeleteComponent } from './productdelete/productdelete.component';
 
 export function tokenGetter() { 
   return localStorage.getItem("jwt"); 
@@ -30,6 +36,11 @@ export function tokenGetter() {
     EmployeeComponent,
     NewEmployeeComponent,
     RegisterComponent,
+    ProductsComponent,
+    ProductdetailsComponent,
+    ProductupdateComponent,
+    ProductaddComponent,
+    ProductdeleteComponent,
     
   
   ],
@@ -50,7 +61,7 @@ export function tokenGetter() {
     
 
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

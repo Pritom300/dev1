@@ -1,0 +1,33 @@
+ <div class="container">
+    <button type="submit" routerLink="/add" class="btn btn-success">ADD PRODUCT</button>
+    <table class="table table-striped" *ngIf="product">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>WarehouseList</th>
+                <th>Image</th>
+                <th>Action</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let em of product">
+
+                <td>{{em.name}}</td>
+                <td>{{em.image}}</td>
+                <td>{{em.warehouseList}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="getProduct(em.id)">DETAILS</button>
+                    <button type="button" class="btn btn-success" (click)="editProduct(em.id)">EDIT</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteProduct(em.id)">DELETE</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div> 
+  
+
+  

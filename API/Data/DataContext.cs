@@ -16,5 +16,8 @@ namespace API.Data
         public DbSet<AppUser> appUsers { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Employee> Employee { get; set; }
+        public DbSet<Products> Products{get;set;}
+        public DbSet<Warehouse> Warehouse{get;set;}
+
     }
 }
