@@ -110,7 +110,7 @@ namespace API.Controllers
         }
 
 
-        [HttpPut("UpdateBook/{id}")]
+        [HttpPut("UpdateProduct/{id}")]
         public IActionResult Update(int id, [FromBody]Products newProduct)
         {
            
@@ -124,7 +124,7 @@ namespace API.Controllers
             
         }
 
-        [HttpPost("AddBook")]
+        [HttpPost("AddProduct")]
         public IActionResult Add(Products product)
          {
 
@@ -143,7 +143,7 @@ namespace API.Controllers
 
 
     [HttpDelete("{id:int}")]
-     public async Task<ActionResult<Employee>> deleteProduct(int id)
+     public async Task<ActionResult<Products>> deleteProduct(int id)
      {
          var r = _repo.delete(id);
          if(r==null)

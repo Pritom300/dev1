@@ -27,12 +27,12 @@ export class ProductService {
   }
 
   upDateProduct(product:ProductHandle){
-    return this.http.put<ProductHandle>(this.baseUrl+"/UpdateBook/"+product.id,product);
+    return this.http.put<ProductHandle>(this.baseUrl+"/UpdateProduct/"+product.id,product);
   }
 
   addProduct(product:ProductHandle)
   {
-    return this.http.post(this.baseUrl+"/AddBook/",product);
+    return this.http.post(this.baseUrl+"/AddProduct/",product);
 
   }
 

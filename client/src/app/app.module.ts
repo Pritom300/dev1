@@ -9,11 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { CustomersComponent } from './customers/customers.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmployeeComponent } from './employee/employee.component';
-import {EmployeeService} from './services/employee.service';
-import { NewEmployeeComponent } from './new-employee/new-employee.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component'; 
 import { ProductService } from './services/product.service';
@@ -32,9 +28,6 @@ export function tokenGetter() {
     AppComponent,
     LoginComponent,
     HomeComponent,
-    CustomersComponent,
-    EmployeeComponent,
-    NewEmployeeComponent,
     RegisterComponent,
     ProductsComponent,
     ProductdetailsComponent,
@@ -61,7 +54,7 @@ export function tokenGetter() {
     
 
   ],
-  providers: [EmployeeService,ProductService],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
