@@ -1,6 +1,6 @@
 <div class="container">
     <br />
-    <h3>Player Details</h3>
+    <h3>Product Details</h3>
     <br />
     <div class="card">
       <div class="card-header">
@@ -9,7 +9,7 @@
             <h4>{{ product.name }}</h4>
           </div>
           <div class="col text-right">
-            <a href="#" routerLink="/players/list" class="btn btn-secondary btn-sm">Back To Players List</a>
+            <a href="#" routerLink="/product" class="btn btn-secondary btn-sm">Back To Product List</a>
           </div>
         </div>
       </div>
@@ -17,9 +17,11 @@
         <li class="list-group-item"><b>Id:</b> {{ product.id }}</li>
         <li class="list-group-item"><b>Name:</b> {{ product.name }}</li>
         <li class="list-group-item"><b>Warehouse:</b> {{ product.warehouseList}}</li>
-        <li class="list-group-item"><b>Image:</b> {{ product.image }}</li>
        
       </ul>
       
+    </div>
+    <div>
+      <img [src]="createImgPath(product.image)" alt="profile picture" style="width:160px; height:160px;">
     </div>
   </div>

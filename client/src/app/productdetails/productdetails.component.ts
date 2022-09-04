@@ -57,4 +57,8 @@ export class ProductdetailsComponent implements OnInit {
     })
   }
 
+  public createImgPath = (serverPath: string) => {
+    return `https://localhost:5001/${serverPath}`;
+  }
+
 }

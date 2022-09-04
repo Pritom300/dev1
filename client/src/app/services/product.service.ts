@@ -30,7 +30,7 @@ export class ProductService {
     return this.http.put<ProductHandle>(this.baseUrl+"/UpdateBook/"+product.id,product);
   }
 
-  addProduct(product:Products)
+  addProduct(product:ProductHandle)
   {
     return this.http.post(this.baseUrl+"/AddBook/",product);
 

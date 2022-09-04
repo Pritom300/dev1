@@ -2,14 +2,14 @@
     <br />
     <div class="row">
       <div class="col">
-        <h3>Create Player</h3>
+        <h3>Create Product</h3>
       </div>
       <div class="col text-right">
         <a href="#" routerLink="/product" class="btn btn-secondary btn-sm">Back To Product List</a>
       </div>
     </div>
     <br />
-    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit(addProductForm)">
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit(addProductForm)" enctype="multipart/form-data">
         
      
    
@@ -33,9 +33,23 @@
         <label for="image">Image:</label>
         <input formControlName="image"
                id="image"
-               type="text"
+               type="file" #file (change)="uploadFile(file.files)"
                class="form-control" />
       </div>
+
+
+      <div class="form-group">
+        <span class="upload" *ngIf="progress > 0">
+          {{progress}}%
+        </span>
+        <span class="upload" *ngIf="message">
+          {{message}}
+        </span>
+      </div>
+
+      
+
+   
    
     
    

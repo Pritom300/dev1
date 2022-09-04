@@ -16,7 +16,8 @@
             <tr *ngFor="let em of product">
 
                 <td>{{em.name}}</td>
-                <td>{{em.image}}</td>
+                <!-- <td>{{em.image}}</td> -->
+                <td><img [src]="createImgPath(em.image)" alt="profile picture" style="width:60px; height:60px;"></td>
                 <td>{{em.warehouseList}}</td>
                 <td>
                     <button type="button" class="btn btn-primary" (click)="getProduct(em.id)">DETAILS</button>

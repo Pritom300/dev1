@@ -54,8 +54,6 @@ namespace API.Data
         {
             
             newProduct.Id=0;
-            //_context.Entry(newProduct).State = EntityState.Added;
-            //_context.Entry(comment.CommentBy).State= EntityState.Unchanged;
             _context.Products.Add(newProduct);
             _context.SaveChanges();
             return newProduct;

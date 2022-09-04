@@ -29,7 +29,8 @@ export class ProductupdateComponent implements OnInit {
         id:[data.id],
         name:[data.name],
         image:[data.image],
-        warehouseId:[data.warehouseId]
+        warehouseId:[data.warehouseId],
+        warehouseList:[data.warehouseList.warehouseList]
         
       });
 
@@ -49,6 +50,10 @@ onSubmit(updateForm)
    
     this.router.navigate(["/product"]);
   })
+}
+
+public createImgPath = (serverPath: string) => {
+  return `https://localhost:5001/${serverPath}`;
 }
 
 }
