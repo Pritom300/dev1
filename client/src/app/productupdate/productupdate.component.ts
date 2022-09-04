@@ -28,7 +28,7 @@ export class ProductupdateComponent implements OnInit {
       this.updateForm = this.fb.group({
         id:[data.id],
         name:[data.name],
-        image:[data.image],
+        imagePath:[data.imagePath],
         warehouseId:[data.warehouseId],
         warehouseList:[data.warehouseList.warehouseList]
         

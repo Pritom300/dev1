@@ -14,12 +14,12 @@ import { ProductupdateComponent } from './productupdate/productupdate.component'
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'delete/:id', component: ProductdeleteComponent },
-  { path: 'update/:id', component: ProductupdateComponent },
-  { path: 'add', component: ProductaddComponent },
-  { path: 'details/:id', component: ProductdetailsComponent},
-  { path: 'product', component: ProductsComponent},
+  { path: '', component: HomeComponent },
+  { path: 'delete/:id', component: ProductdeleteComponent, canActivate: [AuthGuard] },
+  { path: 'update/:id', component: ProductupdateComponent, canActivate: [AuthGuard] },
+  { path: 'add', component: ProductaddComponent, canActivate: [AuthGuard] },
+  { path: 'details/:id', component: ProductdetailsComponent, canActivate: [AuthGuard]},
+  { path: 'product', component: ProductsComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },

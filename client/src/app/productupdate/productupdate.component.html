@@ -10,7 +10,7 @@
     </div>
     <br />
     <div>
-      <img [src]="createImgPath(product.image)" alt="profile picture" style="width:160px; height:160px;">
+      <img [src]="createImgPath(product.imagePath)" alt="profile picture" style="width:160px; height:160px;">
     </div>
     <div>
       WareHouse:- {{product.warehouseList}}
@@ -22,9 +22,9 @@
              type="hidden" />
   
       <div  class="form-group">
-        <label for="image"></label>
-        <input formControlName="image"
-               id="image"
+        <label for="imagePath"></label>
+        <input formControlName="imagePath"
+               id="imagePath"
                type="hidden"
                class="form-control" />
       </div>

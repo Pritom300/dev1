@@ -31,7 +31,7 @@ export class ProductaddComponent implements OnInit {
     this.addProductForm = this.fb.group({
       id:[Math.floor(Math.random()*100)],
       name:[null],
-      image:[null],
+      imagePath:[null],
       warehouseId:[null]
     });
 
@@ -56,7 +56,7 @@ export class ProductaddComponent implements OnInit {
         this.progress = Math.round(100 * event.loaded / event.total);
       }
       else if (event.type === HttpEventType.Response) {
-        this.message = 'Upload success.';
+        this.message = 'Upload success! now you should SAVE this data.';
         this.onUploadFinished.emit(event.body);
         this.convertS(event.body);
 
@@ -73,7 +73,7 @@ export class ProductaddComponent implements OnInit {
 
   onSubmit(addProductForm)
   {
-    this.addProductForm.value.image=this.imageC;
+    this.addProductForm.value.imagePath=this.imageC;
     console.log(this.addProductForm.value.image);
     this.service.addProduct(this.addProductForm.value).subscribe(data=>{
       this.router.navigate(["/product"])

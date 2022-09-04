@@ -44,31 +44,6 @@ namespace API.Migrations
                     b.ToTable("appUsers");
                 });
 
-            modelBuilder.Entity("API.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("firstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("lastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("status")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employee");
-                });
-
             modelBuilder.Entity("API.Models.Products", b =>
                 {
                     b.Property<int>("Id")
@@ -77,10 +52,76 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Image")
+                    b.Property<string>("BrandName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColorName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CostPrice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastPurchaseDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastPurchaseSupplier")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastSalesCustomer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastSalesDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModelName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OldPrice")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductBarcode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SizeName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalPurchase")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalSales")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VariantName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WarehouseId")

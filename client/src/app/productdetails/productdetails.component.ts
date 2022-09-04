@@ -30,7 +30,7 @@ export class ProductdetailsComponent implements OnInit {
       this.updateForm = this.fb.group({
         id:[data.id],
         name:[data.name],
-        image:[data.image],
+        imagePath:[data.imagePath],
         warehouseList:[data.warehouseList.warehouseList]
         
       });

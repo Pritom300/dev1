@@ -40,8 +40,31 @@ namespace API.Data
 
             if(old!=null)
             { 
-                old.Name=newProducts.Name;
-                old.Image=newProducts.Image;
+                old.Id = newProducts.Id;
+                old.CategoryName=newProducts.CategoryName;
+                old.UnitName=newProducts.UnitName;
+                old.Name = newProducts.Name;
+                old.Code=newProducts.Code;
+                old.ProductBarcode=newProducts.ProductBarcode;
+                old.Description=newProducts.Description;
+                old.BrandName=newProducts.BrandName;
+                old.SizeName=newProducts.SizeName;
+                old.ColorName=newProducts.ColorName;
+                old.ModelName=newProducts.ModelName;
+                old.VariantName=newProducts.VariantName;
+                old.OldPrice=newProducts.OldPrice;
+                old.Price=newProducts.Price;
+                old.CostPrice=newProducts.CostPrice;
+                old.Stock=newProducts.Stock;
+                old.TotalPurchase=newProducts.TotalPurchase;
+                old.LastPurchaseDate=newProducts.LastPurchaseDate;
+                old.LastPurchaseSupplier=newProducts.LastPurchaseSupplier;
+                old.TotalSales=newProducts.TotalSales;
+                old.LastSalesDate=newProducts.LastSalesDate;
+                old.LastSalesCustomer=newProducts.LastSalesCustomer;
+                old.ImagePath = newProducts.ImagePath;
+                old.Type=newProducts.Type;
+                old.Status=newProducts.Status;
                 old.WarehouseId= newProducts.WarehouseId;
                 _context.SaveChanges();
                 return old;

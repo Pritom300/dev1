@@ -66,3 +66,5 @@ C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentica
 C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\API.staticwebassets.runtime.json
+C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\Data\SeedData\Products.json
+C:\Users\Pritom\Desktop\Dev\API\bin\Debug\net6.0\Data\SeedData\Warehouse.json

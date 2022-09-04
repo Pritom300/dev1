@@ -10,10 +10,10 @@
 <br>
 <ul class="navbar-nav">
   <!-- <li><a routerLink="/customers">Customer</a></li> -->
-  <li *ngIf="!isUserAuthenticated()"><a routerLink="/login"><h1><b>Login</b></h1></a></li>
-  <li *ngIf="!isUserAuthenticated()"><a routerLink="/register"><h1><b>Register</b></h1></a></li>
-  <li *ngIf="isUserAuthenticated()"><a class="btn btn-primary" [routerLink]="['/employee']" >Employee List</a></li>
-  <li *ngIf="isUserAuthenticated()"><a class="logout" (click)="logOut()"><b>Logout</b></a></li>
+  <li class="nav-link" *ngIf="!isUserAuthenticated()"><a routerLink="/login"><h1><b>Login</b></h1></a></li>
+  <li class="nav-link" *ngIf="!isUserAuthenticated()"><a routerLink="/register"><h1><b>Register</b></h1></a></li>
+  <li class="nav-link" *ngIf="isUserAuthenticated()"><a class="btn btn-outline-primary" [routerLink]="['/product']" >Click To Find Json Product List</a></li>
+  <li class="nav-link" *ngIf="isUserAuthenticated()"><a class="logout" (click)="logOut()"><b>Logout</b></a></li>
 </ul>
 
 
